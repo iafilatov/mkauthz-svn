@@ -1,0 +1,10 @@
+# Groups from this file will be included in all projects
+# <group name>;<access level>;<members>
+
+# Example:
+# allread;r;user1, user2
+# allwrite;rw;admin, manager
+# badguyz;;h4x0r
+
+admins_svn;rw;admin
+readonly;r;silentobserver

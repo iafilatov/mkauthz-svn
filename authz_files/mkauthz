@@ -1,0 +1,10 @@
+[/mkauthz]
+@SomeProject_write = rw
+@SomeProject_read = r
+@SomeProject_foo = r
+* =
+
+[groups]
+SomeProject_write = eeny, meeny
+SomeProject_read = miny
+SomeProject_foo = moe

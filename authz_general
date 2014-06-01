@@ -1,0 +1,28 @@
+#
+# This file contains base rules which will be applied if:
+#  * They are not overridden by project-specific rules
+#  * Project-specific rules file contains errors
+#
+# You probably should just designate a manager for each project
+# here, give him write access and let him handle the rest. In case
+# they make an error, access to their project will be reset to defaults
+# from this file.
+#
+
+
+# ACLs
+
+# Everyone can get a list of projects
+[/]
+* = r
+
+
+[/mkauthz]
+@mkauthz_rw = rw
+* = 
+
+
+# Groups
+
+mkauthz_rw = eeny
+
