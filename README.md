@@ -19,7 +19,37 @@ How it works
 
 2. The manager writes authz file for his project and pushes it to the root of his project in Subversion.
 
+    This file can only contain SVN paths which match the project, or it won't work.
+
 3. mkauthz-svn combines the base file with all per-project files and puts the combined rules file where the server can find it.
+
+
+Configuration
+-------------
+
+1. Configure variables in `collect-authz.sh`:
+
+        svn_root="/var/svn"                   # Server data root
+        svn_url="file://$svn_root/projects"   # Base SVN URL
+        svn_authz="$svn_root/authz"           # Server authz file
+
+2. Configure variables in `mkauthz.pl`:
+
+        # This configures how included file name matches against svn paths inside it
+        # #filename# will be replaced by the name of the file from authz_files
+        my $pat = '^/#filename#(/.*)?$';
+
+3. Create base rules in `authz_general`.
+
+4. Possibly add server-wide groups to `groups_common`.
+
+5. Tell each team manager to write an authz file and place it in the root of their project.
+
+
+Usage
+-----
+
+Run `collect-authz.sh` periodically.
 
 
 Dependencies
