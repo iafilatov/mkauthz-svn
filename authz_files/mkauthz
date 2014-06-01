@@ -1,10 +1,15 @@
+# This is just an example. Normally this file will be fetched from SVN.
+
 [/mkauthz]
-@SomeProject_write = rw
-@SomeProject_read = r
-@SomeProject_foo = r
+@mkauthz_write = rw
+@mkauthz_read = r
+* = 
+
+[/mkauthz/foo]
+@mkauthz_foo = rw
 * =
 
 [groups]
-SomeProject_write = eeny, meeny
-SomeProject_read = miny
-SomeProject_foo = moe
+mkauthz_write = eeny, meeny
+mkauthz_read = miny
+mkauthz_foo = moe
